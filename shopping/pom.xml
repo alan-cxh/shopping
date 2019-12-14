@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example.shopping</groupId>
+    <artifactId>shopping</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <modules>
+        <module>shopping-demo</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.6.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-cloud.version>Finchley.SR2</spring-cloud.version>
+        <!--Lombok-->
+        <lombok.version>1.16.20</lombok.version>
+
+        <jjwt.version>0.9.0</jjwt.version>
+        <fastjson.version>1.2.46</fastjson.version>
+        <hutool.version>3.3.2</hutool.version>
+        <commons-io.version>2.6</commons-io.version>
+        <jasypt.version>1.18</jasypt.version>
+        <swagger2.version>2.8.0</swagger2.version>
+        <ttl.version>2.2.0</ttl.version>
+        <kaptcha.version>0.0.9</kaptcha.version>
+        <javadoc.version>3.0.0</javadoc.version>
+    </properties>
+
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- 使用aliyun镜像 -->
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <name>aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+
+    </repositories>
+</project>
