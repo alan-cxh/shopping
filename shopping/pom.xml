@@ -10,6 +10,10 @@
     <version>1.0</version>
     <modules>
         <module>shopping-demo</module>
+        <module>shopping-common</module>
+        <module>shopping-center</module>
+        <module>shopping-gateway</module>
+        <module>shopping-sso</module>
     </modules>
 
     <parent>

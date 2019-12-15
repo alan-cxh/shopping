@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shopping-demo</artifactId>
+    <artifactId>shopping-center</artifactId>
 
     <dependencies>
         <dependency>
@@ -30,5 +30,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 </project>
