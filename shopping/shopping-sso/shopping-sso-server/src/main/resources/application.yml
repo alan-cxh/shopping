@@ -1,9 +1,9 @@
 server:
-  port: 8181
+  port: 8183
 
 spring:
   application:
-    name: shopping-center
+    name: shopping-sso-server
   profiles:
     active: dev
   cloud:
@@ -12,7 +12,7 @@ spring:
       port: 8500
       #注册到consul的服务名称
       discovery:
-        service-name: shopping-center
+        service-name: ${spring.application.name}
 
 
 

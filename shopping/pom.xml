@@ -14,6 +14,8 @@
         <module>shopping-center</module>
         <module>shopping-gateway</module>
         <module>shopping-sso</module>
+        <module>shopping-sso/shopping-sso-server</module>
+        <module>shopping-sso/shopping-sso-client</module>
     </modules>
 
     <parent>
