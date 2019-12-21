@@ -1,4 +1,4 @@
-package com.example.shopping.sso.client;
+package com.example.shopping.sso.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
