@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>shopping-sso</artifactId>
-
+<!--    作为父项目，必须采用pom方式-->
+    <packaging>pom</packaging>
 
 </project>

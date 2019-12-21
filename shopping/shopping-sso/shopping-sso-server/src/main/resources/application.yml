@@ -6,13 +6,13 @@ spring:
     name: shopping-sso-server
   profiles:
     active: dev
-  cloud:
-    consul:
-      host: 192.168.0.20
-      port: 8500
-      #注册到consul的服务名称
-      discovery:
-        service-name: ${spring.application.name}
+#  cloud:
+#    consul:
+#      host: 192.168.0.20
+#      port: 8500
+#      #注册到consul的服务名称
+#      discovery:
+#        service-name: ${spring.application.name}
 
 
 

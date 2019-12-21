@@ -24,5 +24,10 @@
 |  数据可视化工具  |   grafana       |  3000     |  共用    |
 
 
-* [安装consule教程](https://www.cnblogs.com/toov5/p/9912541.html)
-* [安装consule教程](https://www.jianshu.com/p/7d20dc58c9fc)
+* [安装consule教程1](https://www.cnblogs.com/toov5/p/9912541.html)
+* [安装consule教程2](https://www.jianshu.com/p/7d20dc58c9fc)
+* 启动命令：./consul  agent -dev -ui -node=consul-dev -client=192.168.0.20
+
+## 聚合项目打包
+    使用idea打包时，在顶层父项目中无法添加任何的插件
+    
