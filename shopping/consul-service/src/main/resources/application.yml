@@ -1,9 +1,9 @@
 server:
-  port: 8183
+  port: 8184
 
 spring:
   application:
-    name: shopping-sso-server
+    name: consul-service
   profiles:
     active: dev
   cloud:

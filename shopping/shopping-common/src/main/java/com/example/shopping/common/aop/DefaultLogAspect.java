@@ -1,14 +1,11 @@
 package com.example.shopping.common.aop;
 
 import com.example.shopping.common.util.GsonUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,11 +21,9 @@ import java.util.Map;
  */
 
 @Aspect
-@Component
-//@ConfigurationProperties(prefix = "mall.advice")
-public class LogAspect {
+@Slf4j
+public class DefaultLogAspect {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(LogAspect.class);
 
 
     @Around(value = "execution( * com.example.shopping.*.*.controller.*.*(..))")
@@ -55,10 +50,10 @@ public class LogAspect {
         }
         String json = GsonUtil.BeanToJson(allParamsMap);
         String m = method.getDeclaringClass().getName() + " " + method.getName() + " ";
-        LOGGER.info("start {}... params = {}", m, json);
+        log.info("start {}... params = {}", m, json);
         long startTime = System.currentTimeMillis();
         Object returnObj = joinPoint.proceed(args);
-        LOGGER.info("end {}... cost = {} ms, resp = {}", m, System.currentTimeMillis() - startTime, returnObj);
+        log.info("end {}... cost = {} ms, resp = {}", m, System.currentTimeMillis() - startTime, returnObj);
         return returnObj;
     }
 
