@@ -1,6 +1,5 @@
 package com.example.shopping.sso.server.aop;
 
-import com.example.shopping.common.aop.DefaultLogAspect;
 import org.springframework.stereotype.Component;
 
 /**

@@ -1,3 +1,4 @@
+/*
 package com.example.shopping.common;
 
 import org.springframework.boot.SpringApplication;
@@ -9,3 +10,4 @@ public class CommonApplication {
         SpringApplication.run(CommonApplication.class, args);
     }
 }
+*/

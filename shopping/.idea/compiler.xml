@@ -22,7 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="shopping" options="-parameters" />
       <module name="shopping-center" options="-parameters" />
-      <module name="shopping-common" options="-parameters" />
+      <module name="shopping-common" options="" />
       <module name="shopping-demo" options="-parameters" />
       <module name="shopping-gateway" options="-parameters" />
       <module name="shopping-sso" options="-parameters" />

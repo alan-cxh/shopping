@@ -1,5 +1,6 @@
 package com.example.shopping.sso.server.config;
 
+import com.example.shopping.common.advice.DefaultGlobalExceptionHandlerAdvice;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  */
 @RestControllerAdvice
 @Slf4j
-public class SsoServerGlobalExceptionHandlerAdvice /*extends DefaultGlobalExceptionHandlerAdvice*/ {
+public class SsoServerGlobalExceptionHandlerAdvice extends DefaultGlobalExceptionHandlerAdvice {
 
 
 }

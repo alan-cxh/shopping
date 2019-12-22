@@ -6,10 +6,8 @@ import com.example.shopping.common.exception.BaseException;
 import com.example.shopping.common.exception.SystemErrorType;
 import com.example.shopping.common.util.HttpResult;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartException;
@@ -32,18 +30,12 @@ public class DefaultGlobalExceptionHandlerAdvice {
     /**
      *  请求参数异常
      */
-    @ConditionalOnProperty(prefix = "globalExceptionHandler", name = "enable", havingValue = "true")
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     public Object handle(MethodArgumentNotValidException e) {
         log.error("请求参数有误，异常信息 ： {}", e);
         return HttpResult.error(RunCodeEnum.SYS_PARAMETER_ERROR, e.getBindingResult().getFieldError().getDefaultMessage());
     }
 
-    @ExceptionHandler(value = {MissingServletRequestParameterException.class})
-    public Result missingServletRequestParameterException(MissingServletRequestParameterException ex) {
-        log.error("missing servlet request parameter exception:{}", ex.getMessage());
-        return Result.fail(SystemErrorType.ARGUMENT_NOT_VALID);
-    }
 
     @ExceptionHandler(value = {MultipartException.class})
     public Result uploadFileLimitException(MultipartException ex) {

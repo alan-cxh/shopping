@@ -1,4 +1,4 @@
-package com.example.shopping.common.aop;
+package com.example.shopping.sso.server.aop;
 
 import com.example.shopping.common.util.GsonUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +31,7 @@ public class DefaultLogAspect {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
 
-        LinkedHashMap<String, Object> allParamsMap = new LinkedHashMap<>();
+        LinkedHashMap<String, Object> allParamsMap = new LinkedHashMap<String, Object>();
         Object[] args = joinPoint.getArgs();
         String[] parameterNames = signature.getParameterNames();
         for (int i = 0; i < args.length; i ++) {
@@ -43,7 +43,7 @@ public class DefaultLogAspect {
             if (arg instanceof HttpServletRequest || arg instanceof HttpServletResponse) {
 
             } else {
-                Map<String, Object> paramMap = new HashMap<>();
+                Map<String, Object> paramMap = new HashMap<String, Object>();
                 paramMap.put(parameterName, arg);
                 allParamsMap.putAll(paramMap);
             }
