@@ -10,8 +10,6 @@
         <module name="shopping-sso" />
         <module name="shopping-demo" />
         <module name="shopping-sso-client" />
-        <module name="shopping-common" />
-        <module name="shopping-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,7 +20,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="shopping" options="-parameters" />
       <module name="shopping-center" options="-parameters" />
-      <module name="shopping-common" options="" />
+      <module name="shopping-common" options="-parameters" />
       <module name="shopping-demo" options="-parameters" />
       <module name="shopping-gateway" options="-parameters" />
       <module name="shopping-sso" options="-parameters" />

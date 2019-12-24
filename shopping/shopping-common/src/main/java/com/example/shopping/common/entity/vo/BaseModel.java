@@ -1,5 +1,6 @@
 package com.example.shopping.common.entity.vo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -14,8 +15,9 @@ import java.util.Date;
 @Data
 public class BaseModel implements Serializable {
     private Long id;
-    private int delMark; // 删除标记, 0：正常，1：删除
+    @JsonIgnore
     private Date createTime;
+    @JsonIgnore
     private Date updateTime;
 
 }

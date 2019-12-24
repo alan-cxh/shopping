@@ -11,10 +11,10 @@ import lombok.Data;
  */
 @Data
 public class SysUser extends BaseModel {
-    private String accountNo; // 账号 唯一
+    private String accountNo; // 账号,具有唯一性
     private String password; // 密码
-    private int delMark; // 是否删除
+    private int delFlag; // 是否删除
     private String phone; // 电话号码
-    private String deptId; // 所在部门
+    private int deptId; // 所在部门
     private String description; // 个人描述
 }

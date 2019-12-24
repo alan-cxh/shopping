@@ -6,6 +6,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,13 +21,13 @@ import java.util.Map;
  * @create: 2019-12-07 16:20
  */
 
+@Component
 @Aspect
 @Slf4j
 public class DefaultLogAspect {
 
 
-
-    @Around(value = "execution( * com.example.shopping.*.*.controller.*.*(..))")
+    @Around(value = "execution( * com.example.shopping.sso.server.controller.*.*(..))")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
@@ -53,7 +54,7 @@ public class DefaultLogAspect {
         log.info("start {}... params = {}", m, json);
         long startTime = System.currentTimeMillis();
         Object returnObj = joinPoint.proceed(args);
-        log.info("end {}... cost = {} ms, resp = {}", m, System.currentTimeMillis() - startTime, returnObj);
+        log.info("end {}... cost = {} s, resp = {}", m, (System.currentTimeMillis() - startTime)/1000.0, returnObj);
         return returnObj;
     }
 

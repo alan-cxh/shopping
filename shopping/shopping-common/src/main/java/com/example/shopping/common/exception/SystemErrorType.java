@@ -15,6 +15,7 @@ public enum SystemErrorType implements ErrorType {
     ARGUMENT_NOT_VALID("020000", "请求参数校验不通过"),
     UPLOAD_FILE_SIZE_LIMIT("020001", "上传文件大小超过限制"),
 
+
     DUPLICATE_PRIMARY_KEY("030000","唯一键冲突");
 
     /**
