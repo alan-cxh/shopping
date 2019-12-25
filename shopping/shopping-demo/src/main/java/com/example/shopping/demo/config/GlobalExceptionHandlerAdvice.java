@@ -1,10 +1,8 @@
-package com.example.shopping.sso.server.config;
+package com.example.shopping.demo.config;
 
 import com.example.shopping.common.advice.DefaultGlobalExceptionHandlerAdvice;
 import com.example.shopping.common.entity.vo.Result;
-import com.example.shopping.common.exception.CommonException;
 import com.example.shopping.common.exception.ServiceException;
-import com.example.shopping.common.exception.SystemErrorType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

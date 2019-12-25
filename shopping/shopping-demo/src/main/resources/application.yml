@@ -1,7 +1,10 @@
 server:
-  port: 8182
+  port: 8184
 
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
   application:
     name: shopping-demo
   profiles:
@@ -12,7 +15,56 @@ spring:
       port: 8500
       #注册到consul的服务名称
       discovery:
+        prefer-ip-address: true
         service-name: ${spring.application.name}
+        healthCheckPath: /consul/health
+        # 启用服务发现
+        enabled: true
+        # 启用服务注册
+        register: true
+        # 服务停止时取消注册
+        deregister: true
+        # 执行监控检查的频率
+        health-check-interval: 30s
+        # 设置健康检查失败多长时间后，取消注册
+        health-check-critical-timeout: 30s
+        # 健康检查的路径
+        health-check-path: /actuator/info
+  #        # 服务注册标识，格式为：应用名称+服务器IP+端口
+  #        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+  #数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.113:3306/shopping?characterEncoding=UTF-8&useUnicode=true
+    username: root
+    password: 123456
+    druid:
+      max-active: 100
+  #  redis配置
+  redis:
+    host: 192.168.0.113
+    port: 6379
+    #    password: Lysb_TestRedis!2019
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 500
+        min-idle: 0
+    lettuce:
+      shutdown-timeout: 0
+
+# 开启驼峰命名法
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
+
+
+
+
 
 
 

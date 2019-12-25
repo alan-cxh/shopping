@@ -1,4 +1,4 @@
-package com.example.shopping.sso.server.model;
+package com.example.shopping.sso.client.model;
 
 import com.example.shopping.common.entity.vo.BaseModel;
 import lombok.Data;
@@ -11,7 +11,7 @@ import lombok.Data;
  * @date 2019/12/22 13:17
  */
 @Data
-public class SysRoel extends BaseModel {
+public class SysRole extends BaseModel {
     private String roleCode;
     private String roleName;
     private String description;

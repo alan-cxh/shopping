@@ -1,4 +1,4 @@
-package com.example.shopping.sso.server.model;
+package com.example.shopping.sso.client.model;
 
 import com.example.shopping.common.entity.vo.BaseModel;
 import lombok.Data;

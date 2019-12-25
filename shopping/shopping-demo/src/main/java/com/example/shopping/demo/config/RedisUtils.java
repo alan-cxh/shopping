@@ -1,9 +1,7 @@
-package com.example.shopping.sso.server.util;
+package com.example.shopping.demo.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.Collection;
 import java.util.List;

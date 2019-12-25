@@ -25,6 +25,7 @@
       <module name="shopping-gateway" options="-parameters" />
       <module name="shopping-sso" options="-parameters" />
       <module name="shopping-sso-client" options="-parameters" />
+      <module name="shopping-sso-jdk" options="-parameters" />
       <module name="shopping-sso-server" options="-parameters" />
     </option>
   </component>

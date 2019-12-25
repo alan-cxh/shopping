@@ -1,7 +1,7 @@
 package com.example.shopping.sso.server.service;
 
 import com.example.shopping.sso.server.form.UserForm;
-import com.example.shopping.sso.server.model.SysUser;
+import com.example.shopping.sso.client.model.SysUser;
 
 /**
  * @author alan chen
@@ -11,4 +11,6 @@ import com.example.shopping.sso.server.model.SysUser;
  */
 public interface SysUserService {
     SysUser login(UserForm form);
+
+    SysUser addUser(SysUser sysUser);
 }

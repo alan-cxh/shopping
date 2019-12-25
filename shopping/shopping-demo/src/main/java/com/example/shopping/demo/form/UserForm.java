@@ -1,4 +1,4 @@
-package com.example.shopping.sso.server.form;
+package com.example.shopping.demo.form;
 
 import lombok.Data;
 
